@@ -1,10 +1,8 @@
-from flask import Flask, request, abort,jsonify
+from flask import Flask, request, abort
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import (MessageEvent, TextMessage, TextSendMessage, ImageSendMessage)
-from  flask.ext.pymongo import  PyMongo
-#import datetime
-#import time
+
 app = Flask(__name__)
 
 
@@ -42,7 +40,8 @@ def handle_message(event):
                 original_content_url='https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg',
                 preview_image_url='https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg'
             )
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(image_message))
+            line_bot_api.push_message('U7183997e3e85a10d8c5f1f3925825016', image_message)
+
 
 
 if __name__ == '__main__':
