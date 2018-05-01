@@ -37,8 +37,8 @@ def handle_message(event):
 
         if event.message.text == 'รูป':
             image_message = ImageSendMessage(
-                original_content_url='https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg',
-                preview_image_url='https://raw.githubusercontent.com/kittinan/Sample-Line-Bot/master/images/beer.jpg'
+                original_content_url='http://www.majorcineplex.com/uploads/movie/1792/thumb_1792.jpg',
+                preview_image_url='http://www.majorcineplex.com/uploads/movie/1792/thumb_1792.jpg'
             )
             line_bot_api.push_message('U7183997e3e85a10d8c5f1f3925825016', image_message)
 
